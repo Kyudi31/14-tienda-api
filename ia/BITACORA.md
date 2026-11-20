@@ -12,6 +12,7 @@ Registro de sesiones de desarrollo asistido con IA, metodologías aplicadas, val
 | **#2 · 14-Nov** | Integración de Zod y Vitest | *"Agrega scripts de calidad npm run check con vitest run"* | Ejecución del pipeline de pruebas locales | Aceptado |
 | **#3 · 14-Nov** | Estructura de Route Handlers y Firestore | *"Planifica las rutas de auth y ajuste transaccional en /api/productos/:id/ajustar"* | Revisión de aislamiento por ruta `usuarios/{uid}/producto/{id}` | Aceptado |
 | **#4 · 20-Nov** | Autenticación mediada por la API (Hito 3 · Tarea 3.1) | *"Implementa /api/auth/registro, /login, /refresh, /yo con validación Zod, verificación con Firebase Admin y suite Vitest"* | `npm run check` 13/13 pruebas pasadas (100%), modularización < 300 líneas, TypeScript strict | Listo para commit |
+| **#5 · 20-Nov** | Endpoints de Negocio, Firestore y Sincronización (Hito 3 · Tarea 3.2) | *"Implementa lib/firestoreSchemas, lib/firestoreService (transacciones, bajo_stock, sincronización since), route handlers en /api/productos y /api/movimientos, y suite Vitest con 5 pruebas obligatorias"* | `npm run check` 25/25 pruebas pasadas (100%), 0 advertencias ESLint, archivos ≤ 250 líneas, TypeScript strict | Listo para commit |
 
 ---
 

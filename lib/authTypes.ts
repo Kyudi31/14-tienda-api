@@ -23,7 +23,7 @@ export interface RefreshTokenResponse {
   expiraEnSeg: number;
 }
 
-export class AuthError extends Error {
+export class ApiError extends Error {
   readonly status: number;
   readonly detalles?: Array<{ campo: string; mensaje: string }>;
 
@@ -33,9 +33,20 @@ export class AuthError extends Error {
     detalles?: Array<{ campo: string; mensaje: string }>
   ) {
     super(message);
-    this.name = "AuthError";
+    this.name = "ApiError";
     this.status = status;
     this.detalles = detalles;
+  }
+}
+
+export class AuthError extends ApiError {
+  constructor(
+    status: number,
+    message: string,
+    detalles?: Array<{ campo: string; mensaje: string }>
+  ) {
+    super(status, message, detalles);
+    this.name = "AuthError";
   }
 }
 
@@ -70,7 +81,7 @@ export function manejarErrorApi(error: unknown): NextResponse {
   if (error instanceof Response) {
     return error as NextResponse;
   }
-  if (error instanceof AuthError) {
+  if (error instanceof ApiError) {
     return NextResponse.json(
       {
         error: error.message,
