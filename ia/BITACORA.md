@@ -11,6 +11,7 @@ Registro de sesiones de desarrollo asistido con IA, metodologías aplicadas, val
 | **#1 · 14-Nov** | Inicialización del repositorio y reglas de IA | *"Crea la configuración de AGENTS.md, Vitest y Firebase Admin para Next.js"* | Comprobación de runtime Node.js y validación de tipos | Aceptado |
 | **#2 · 14-Nov** | Integración de Zod y Vitest | *"Agrega scripts de calidad npm run check con vitest run"* | Ejecución del pipeline de pruebas locales | Aceptado |
 | **#3 · 14-Nov** | Estructura de Route Handlers y Firestore | *"Planifica las rutas de auth y ajuste transaccional en /api/productos/:id/ajustar"* | Revisión de aislamiento por ruta `usuarios/{uid}/producto/{id}` | Aceptado |
+| **#4 · 20-Nov** | Autenticación mediada por la API (Hito 3 · Tarea 3.1) | *"Implementa /api/auth/registro, /login, /refresh, /yo con validación Zod, verificación con Firebase Admin y suite Vitest"* | `npm run check` 13/13 pruebas pasadas (100%), modularización < 300 líneas, TypeScript strict | Listo para commit |
 
 ---
 
